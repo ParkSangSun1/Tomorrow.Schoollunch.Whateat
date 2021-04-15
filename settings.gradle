@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Tomorrow_School_lunch"
