@@ -9,28 +9,47 @@
 
         tools:context=".UI.main.fragments.TodayMealFragment">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="15dp"
-
-            >
-            <TextView
+            android:layout_height="wrap_content">
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/nanumgothic_extrabold"
-                android:text="2021년 4월 16일"
-                android:textColor="@color/black"
-                android:textSize="27dp" />
-        </LinearLayout>
+                android:layout_alignParentTop="true"
+                android:layout_alignBottom="@id/add_school_recycler_view"
+                android:layout_marginBottom="100dp"
+                android:background="@color/main_blue"
+                />
+
+            <LinearLayout
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:text="2021년 4월 16일"
+                    android:textColor="@color/white"
+                    android:textSize="27dp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/add_school_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/date"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/add_school_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+
 
     </LinearLayout>
 

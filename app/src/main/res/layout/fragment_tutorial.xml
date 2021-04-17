@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.jem.liquidswipe.layout.LiquidSwipeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.tutorial.TutorialFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalBottomGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/horizontalBottomGuideLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/welcome" />
+
+    <TextView
+        android:id="@+id/fragment_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumbarungothicbold"
+        android:gravity="center"
+        android:text="급.뭐에 오신걸 환영합니다"
+        android:layout_margin="30dp"
+        android:textColor="@color/black"
+        android:textSize="29sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalBottomGuideLine"
+        app:layout_constraintVertical_bias="0.3" />
+    <TextView
+        android:id="@+id/fragment_textview_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/fragment_textview"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="@font/nanumbarungothic"
+        android:text="오호"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        />
+
+</com.jem.liquidswipe.layout.LiquidSwipeConstraintLayout>

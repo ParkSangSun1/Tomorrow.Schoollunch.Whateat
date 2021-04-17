@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        tools:context=".UI.tutorial.TutorialActivity">
+
+        <com.jem.liquidswipe.LiquidSwipeViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/go_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:text="시작하기"
+                android:textSize="18sp"
+                android:padding="18dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nanumbarungothicbold"
+                android:background="@color/main_blue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="옆으로 밀어 튜토리얼을 확인하세요"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:layout_below="@+id/go_start"
+                android:fontFamily="@font/nanumbarungothic"
+                android:textColor="#575656"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

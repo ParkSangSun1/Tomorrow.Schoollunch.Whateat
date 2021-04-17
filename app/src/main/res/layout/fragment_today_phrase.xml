@@ -12,15 +12,31 @@
     tools:context=".UI.main.fragments.TodayPhraseFragment">
 
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="한줄 급식 정보"
-        android:textSize="30dp"
-        android:layout_marginTop="30dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/nanumgothic_extrabold"
-        />
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한줄 급식 정보"
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/nanumgothic_extrabold"
+            />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_notifications_none_24"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+
+            />
+    </RelativeLayout>
+
 
     <LinearLayout
         android:background="@drawable/one_phrase"
