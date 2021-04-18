@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tomorrow_School_lunch</string>
+    <string name="app_name">급뭐</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="today_meal_item_grade">총 평점 <b>4.5</b>/<b>5</b></string>

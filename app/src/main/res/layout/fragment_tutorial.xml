@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/nanumbarungothicbold"
         android:gravity="center"
-        android:text="급.뭐에 오신걸 환영합니다"
+        android:text="튜토리얼 시작"
         android:layout_margin="30dp"
         android:textColor="@color/black"
         android:textSize="29sp"
@@ -52,7 +52,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:fontFamily="@font/nanumbarungothic"
-        android:text="오호"
+        android:text="지금부터 급뭐 가이드를 시작하겠습니다"
         android:gravity="center"
         android:layout_margin="20dp"
         />
