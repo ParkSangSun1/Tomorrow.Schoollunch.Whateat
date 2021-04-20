@@ -39,6 +39,9 @@ android {
 }
 
 dependencies {
+    def coroutines_version = "1.4.3"
+    def retrofit_version = "2.9.0"
+    def lifecycle_version = "2.3.0"
 
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -61,5 +64,31 @@ dependencies {
 
     //lottie 애니메이션
     implementation 'com.airbnb.android:lottie:3.4.0'
+
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    //coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    //코루틴 안드로이드 의존성 추가
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    // Annotation processor(위에 'kotlin-kapt' 플러그인 추가)
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+
+    //okhttp
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.1"
+
+
+    //TextInputLayout edittext
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'com.google.firebase:firebase-auth:20.0.3'
 
 }
