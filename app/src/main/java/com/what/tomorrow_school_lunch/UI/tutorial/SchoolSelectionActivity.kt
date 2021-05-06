@@ -1,5 +1,6 @@
 package com.what.tomorrow_school_lunch.UI.tutorial
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +10,7 @@ import com.what.tomorrow_school_lunch.DataClass.Contants
 import com.what.tomorrow_school_lunch.DataClass.RESPONSE_STATE
 import com.what.tomorrow_school_lunch.DataClass.SchoolInfoAPI
 import com.what.tomorrow_school_lunch.DataClass.retrofit.SchoolInfoRetrofitManager
+import com.what.tomorrow_school_lunch.MainActivity
 import com.what.tomorrow_school_lunch.R
 import com.what.tomorrow_school_lunch.databinding.ActivitySchoolSelectionBinding
 
@@ -18,6 +20,11 @@ class SchoolSelectionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_school_selection)
 
+        binding.goStart.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         binding.findSchoolBtn.setOnClickListener {
 
             SchoolInfoAPI.SCHUL_NM = binding.schoolName.text.toString()
@@ -27,6 +34,7 @@ class SchoolSelectionActivity : AppCompatActivity() {
             //검색 api 호출
             SchoolInfoRetrofitManager.instance.searchSchool(searchTerm = "&SCHUL_NM=${binding.schoolName.text}", completion ={
                     responseState, responseBody ->
+
                 when(responseState){
                     RESPONSE_STATE.OKAY->{
                         Log.i("로그","api 호출성공 : $responseBody")
