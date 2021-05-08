@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.what.tomorrow_school_lunch.MainActivity
+import com.what.tomorrow_school_lunch.UI.main.MainActivity
 import com.what.tomorrow_school_lunch.R
 import com.what.tomorrow_school_lunch.UI.tutorial.TutorialActivity
 
