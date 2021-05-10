@@ -5,26 +5,31 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.what.tomorrow_school_lunch.DataClass.UserSchoolInfo
 import com.what.tomorrow_school_lunch.UI.main.MainActivity
 import com.what.tomorrow_school_lunch.R
 import com.what.tomorrow_school_lunch.UI.tutorial.TutorialActivity
+import com.what.tomorrow_school_lunch.Util.PreferenceUtil
 
 class SplashActivity : AppCompatActivity() {
+    companion object {
+        lateinit var prefs: PreferenceUtil
+    }
 
-    private lateinit var mPreferences: SharedPreferences
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        prefs = PreferenceUtil(applicationContext)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        mPreferences = getSharedPreferences("FIRST_START", MODE_PRIVATE)
+        prefs.getString("FIRST_START","")
+//        prefs = ("FIRST_START", MODE_PRIVATE)
 
-        val checkFirst = mPreferences.getBoolean("FIRST_START",false)
-        if(checkFirst==false){
-            val editor: SharedPreferences.Editor = mPreferences.edit()
-            editor.putBoolean("FIRST_START",true)
-            editor.commit()
+        //true 실행 해봄, false 실행 안해봄
+        val checkFirst :Boolean= prefs.getString("FIRST_START", "false").toString().toBoolean()
+        if (checkFirst == false) {
+            prefs.setString("FIRST_START","true")
 
             Handler().postDelayed(
                 {
@@ -39,7 +44,11 @@ class SplashActivity : AppCompatActivity() {
                 },
                 2000
             )
-        }else{
+        } else {
+            UserSchoolInfo.School_Name = prefs.getString("SCHUL_NM","")
+            UserSchoolInfo.School_Code = prefs.getString("SD_SCHUL_CODE","")
+            UserSchoolInfo.Atpt_Ofcdc_Code = prefs.getString("ATPT_OFCDC_SC_CODE","")
+
             Handler().postDelayed(
                 {
 
@@ -54,7 +63,6 @@ class SplashActivity : AppCompatActivity() {
                 2000
             )
         }
-
 
 
     }

@@ -1,10 +1,7 @@
-package com.what.tomorrow_school_lunch.DataClass.newretrofit
-
-import java.lang.reflect.Type
+package com.what.tomorrow_school_lunch.Retrofit.SchoolSelect
 
 object Contants {
     const val TAG : String = "로그"
-    var SCHOOLNAME=""
 }
 
 object SchoolInfoAPI2{

@@ -23,7 +23,7 @@ class TutorialActivity : AppCompatActivity() {
 
         binding.viewpager.adapter = CustomPagerAdapter(this, liquidSwipeClipPathProviders)
         binding.goStart.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, SchoolSelectionActivity::class.java)
             startActivity(intent)
             finish()
         }

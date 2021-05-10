@@ -1,10 +1,7 @@
-package com.what.tomorrow_school_lunch.DataClass.newretrofit
+package com.what.tomorrow_school_lunch.Retrofit.SchoolSelect
 
-import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Headers
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface SchoolInfoAPI {

@@ -1,15 +1,11 @@
-package com.what.tomorrow_school_lunch.DataClass.newretrofit
+package com.what.tomorrow_school_lunch.Retrofit.SchoolSelect
 
-import com.google.gson.annotations.SerializedName
 
 data class SchoolInfoDTO(
-//    @SerializedName("ATPT_OFCDC_SC_CODE")
-//    val ATPT_OFCDC_SC_CODE :String,
+    val ATPT_OFCDC_SC_CODE :String,
 //    @SerializedName("ATPT_OFCDC_SC_NM")
 //    val ATPT_OFCDC_SC_NM : String,
-//    @SerializedName("SD_SCHUL_CODE")
-//    val SD_SCHUL_CODE : String,
-    @SerializedName("SCHUL_NM")
+    val SD_SCHUL_CODE : String,
     val SCHUL_NM:String,
 //    @SerializedName("ENG_SCHUL_NM")
 //    val ENG_SCHUL_NM:String,

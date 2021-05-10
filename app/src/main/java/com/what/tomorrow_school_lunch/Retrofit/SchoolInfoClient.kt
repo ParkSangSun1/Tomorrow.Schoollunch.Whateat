@@ -1,6 +1,7 @@
-package com.what.tomorrow_school_lunch.DataClass.newretrofit
+package com.what.tomorrow_school_lunch.Retrofit
 
 import com.google.gson.GsonBuilder
+import com.what.tomorrow_school_lunch.Retrofit.SchoolSelect.SchoolInfoAPI2
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
