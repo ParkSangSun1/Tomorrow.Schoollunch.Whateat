@@ -3,7 +3,6 @@ package com.what.tomorrow_school_lunch.UI.tutorial
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
@@ -12,10 +11,10 @@ import androidx.lifecycle.liveData
 import com.what.tomorrow_school_lunch.DataClass.UserSchoolInfo
 import com.what.tomorrow_school_lunch.DataClass.UserSchoolInfo.School_Name
 import com.what.tomorrow_school_lunch.Retrofit.SchoolSelect.*
-import com.what.tomorrow_school_lunch.UI.main.MainActivity
 import com.what.tomorrow_school_lunch.R
 import com.what.tomorrow_school_lunch.Retrofit.SchoolInfoClient
 import com.what.tomorrow_school_lunch.UI.SplashActivity.Companion.prefs
+import com.what.tomorrow_school_lunch.UI.newMain.fragment.BottomNavigationActivity
 import com.what.tomorrow_school_lunch.databinding.ActivitySchoolSelectionBinding
 import retrofit2.Response
 
@@ -36,7 +35,7 @@ class SchoolSelectionActivity : AppCompatActivity() {
             UserSchoolInfo.School_Code = prefs.getString("SD_SCHUL_CODE","")
             UserSchoolInfo.Atpt_Ofcdc_Code = prefs.getString("ATPT_OFCDC_SC_CODE","")
 
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, BottomNavigationActivity::class.java)
             startActivity(intent)
             finish()
         }

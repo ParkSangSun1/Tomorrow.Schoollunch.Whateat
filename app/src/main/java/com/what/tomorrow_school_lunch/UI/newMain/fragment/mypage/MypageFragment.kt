@@ -1,4 +1,4 @@
-package com.what.tomorrow_school_lunch.UI.newMain.fragment
+package com.what.tomorrow_school_lunch.UI.newMain.fragment.mypage
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

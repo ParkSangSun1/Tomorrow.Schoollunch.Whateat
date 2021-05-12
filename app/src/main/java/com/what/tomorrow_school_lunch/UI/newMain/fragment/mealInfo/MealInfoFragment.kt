@@ -1,4 +1,4 @@
-package com.what.tomorrow_school_lunch.UI.newMain.fragment
+package com.what.tomorrow_school_lunch.UI.newMain.fragment.mealInfo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,10 +8,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.google.android.material.tabs.TabLayoutMediator
 import com.what.tomorrow_school_lunch.R
-import com.what.tomorrow_school_lunch.UI.main.adapters.ViewPagerAdapter
-import com.what.tomorrow_school_lunch.UI.newMain.mealInfo.MealViewPagerAdapter
+import com.what.tomorrow_school_lunch.UI.newMain.adapters.MealViewPagerAdapter
 import com.what.tomorrow_school_lunch.databinding.FragmentMealInfoBinding
-import com.what.tomorrow_school_lunch.databinding.FragmentTodayMealBinding
 
 
 class MealInfoFragment : Fragment() {
@@ -31,7 +29,7 @@ class MealInfoFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_meal_info, container, false)
 
 
-        val adapter = fragmentManager?.let { MealViewPagerAdapter(it, lifecycle) }
+        val adapter = childFragmentManager?.let { MealViewPagerAdapter(it, lifecycle) }
         binding.mealViewPager2.adapter = adapter
 
         TabLayoutMediator(binding.mealTabLayout, binding.mealViewPager2) { tab, position ->

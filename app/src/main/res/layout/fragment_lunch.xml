@@ -2,53 +2,52 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".UI.newMain.mealInfo.LunchFragment"
-    >
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignBottom="@id/add_school_recycler_view"
-            android:layout_marginBottom="100dp"
-            android:background="@color/main_blue"
-            />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".UI.newMain.fragment.BottomNavigationActivity">
 
-        <LinearLayout
-            android:id="@+id/date"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="15dp"
+            android:layout_height="wrap_content">
 
-            >
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:fontFamily="@font/nanumbarungothicbold"
-                android:text="2021년 4월 16일"
-                android:textColor="@color/main_blue"
-                android:textSize="27dp" />
-        </LinearLayout>
+                android:layout_alignBottom="@id/add_school_recycler_view"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="100dp"
+                android:background="@color/main_blue" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/add_school_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_below="@+id/date"
-            android:layout_height="wrap_content"
-            />
-    </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:padding="15dp"
+
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:text="2021년 4월 16일"
+                    android:textColor="@color/main_blue"
+                    android:textSize="27dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/add_school_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date" />
+        </RelativeLayout>
 
 
-
-
-</LinearLayout>
+    </LinearLayout>
 </layout>

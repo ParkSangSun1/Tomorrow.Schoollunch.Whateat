@@ -13,21 +13,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tomorrow_School_lunch">
-        <activity android:name=".UI.newMain.TodayMealsFragment"></activity>
-        <activity android:name=".UI.newMain.OnelineEvaluationFragment" />
-        <activity android:name=".UI.newMain.MypageFragment" />
-        <activity android:name=".UI.newMain.RankingFragment" />
+
         <activity android:name=".UI.newMain.fragment.BottomNavigationActivity">
+
+        </activity>
+        <activity android:name=".UI.tutorial.SchoolSelectionActivity" />
+        <activity android:name=".UI.tutorial.TutorialActivity" />
+        <activity android:name=".UI.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.tutorial.SchoolSelectionActivity" />
-        <activity android:name=".UI.tutorial.TutorialActivity" />
-        <activity android:name=".UI.SplashActivity" />
-        <activity android:name=".UI.main.MainActivity" />
+
     </application>
 
 </manifest>

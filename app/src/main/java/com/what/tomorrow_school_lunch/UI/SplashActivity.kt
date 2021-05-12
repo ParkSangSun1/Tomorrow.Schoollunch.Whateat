@@ -1,13 +1,12 @@
 package com.what.tomorrow_school_lunch.UI
 
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.what.tomorrow_school_lunch.DataClass.UserSchoolInfo
-import com.what.tomorrow_school_lunch.UI.main.MainActivity
 import com.what.tomorrow_school_lunch.R
+import com.what.tomorrow_school_lunch.UI.newMain.fragment.BottomNavigationActivity
 import com.what.tomorrow_school_lunch.UI.tutorial.TutorialActivity
 import com.what.tomorrow_school_lunch.Util.PreferenceUtil
 
@@ -55,7 +54,7 @@ class SplashActivity : AppCompatActivity() {
                     startActivity(
                         Intent(
                             this@SplashActivity,
-                            MainActivity::class.java
+                            BottomNavigationActivity::class.java
                         )
                     )
                     finish()

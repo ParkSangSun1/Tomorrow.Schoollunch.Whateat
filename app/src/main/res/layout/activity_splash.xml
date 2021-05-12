@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanumgothic_extrabold"
-                android:text="뭐"
+                android:text="해"
                 android:textColor="@color/black"
                 android:textSize="70sp"
                 />
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/nanumbarungothic"
-            android:text="오늘 급식 뭐야?"
+            android:text="급식 뭐해!?"
             android:textColor="@color/black"
             android:textSize="23sp"
             app:layout_constraintBottom_toTopOf="@+id/textView"

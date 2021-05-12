@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UI.newMain.mealInfo.MorningFragment">
+    tools:context=".UI.newMain.fragment.mealInfo.MorningFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

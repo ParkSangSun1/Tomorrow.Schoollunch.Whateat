@@ -1,4 +1,4 @@
-package com.what.tomorrow_school_lunch.UI.newMain.mealInfo
+package com.what.tomorrow_school_lunch.UI.newMain.fragment.mealInfo.time
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
