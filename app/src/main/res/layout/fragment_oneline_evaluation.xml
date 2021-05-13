@@ -1,58 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent"
-    >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="15dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        android:background="@color/main_blue"
-        >
-        <RelativeLayout
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4F68CF" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/main_blue"
+            android:orientation="vertical"
 
-            >
-            <TextView
-                android:layout_width="wrap_content"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="한줄 급식 정보"
-                android:textSize="27dp"
-                android:textColor="@color/white"
-                android:layout_alignParentLeft="true"
-                android:fontFamily="@font/nanumbarungothicbold"
-                />
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_baseline_notifications_none_24"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
+                >
 
-                />
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/nanumbarungothicbold"
+                    android:text="급식 정보"
+                    android:textColor="@color/white"
+                    android:textSize="27dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_baseline_notifications_none_24"
+
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/viewpager"
+                    app:ci_drawable="@drawable/black_radius"
+                    app:ci_height="7dp"
+                    app:ci_margin="4dp"
+                    app:ci_width="7dp" />
+
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
 
     </LinearLayout>
-
-
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-    </RelativeLayout>
-
-
-</LinearLayout>
 </layout>

@@ -99,4 +99,7 @@ dependencies {
     //https://android-arsenal.com/details/1/7961
     implementation 'com.github.zhpanvip:BannerViewPager:3.5.0'
 
+    implementation 'me.relex:circleindicator:2.1.6'
+
+
 }

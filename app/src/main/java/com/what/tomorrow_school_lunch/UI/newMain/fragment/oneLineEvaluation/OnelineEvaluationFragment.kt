@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.what.tomorrow_school_lunch.R
 import com.what.tomorrow_school_lunch.UI.main.adapters.AddSchoolRecyclerViewAdapter
+import com.what.tomorrow_school_lunch.UI.newMain.fragment.oneLineEvaluation.adapter.CustomPagerAdapter
 import com.what.tomorrow_school_lunch.databinding.FragmentOnelineEvaluationBinding
 import com.zhpan.indicator.enums.IndicatorSlideMode
 import com.zhpan.indicator.enums.IndicatorStyle
@@ -16,6 +18,7 @@ import com.zhpan.indicator.enums.IndicatorStyle
 
 class OnelineEvaluationFragment : Fragment() {
 
+    private var vpAdapter: FragmentStatePagerAdapter? = null
 
     lateinit var binding: FragmentOnelineEvaluationBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +37,11 @@ class OnelineEvaluationFragment : Fragment() {
             false
         )
 
+
+        vpAdapter = CustomPagerAdapter(childFragmentManager)
+
+        binding.viewpager.adapter = vpAdapter
+        binding.indicator.setViewPager(binding.viewpager)
 //        binding.indicatorView.apply {
 //            setSliderColor(0, 0)
 //            setSliderWidth(resources.getDimension(R.dimen.dp_10))
