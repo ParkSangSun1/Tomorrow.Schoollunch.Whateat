@@ -37,7 +37,7 @@
                 android:layout_height="250dp"
                 android:layout_gravity="center_horizontal"
                 app:lottie_autoPlay="true"
-                app:lottie_rawRes="@raw/smile1"
+                app:lottie_rawRes="@raw/angry"
                 app:lottie_loop="true"
 
                 />

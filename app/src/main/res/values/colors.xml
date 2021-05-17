@@ -10,4 +10,5 @@
     <color name="grey">#F0F2F5</color>
     <color name="dark_grey">#C3C3C5</color>
     <color name="main_blue">#748ffc</color>
+    <color name="oneline_title_box_line">#AEAEAE</color>
 </resources>

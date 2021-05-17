@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import com.what.tomorrow_school_lunch.DataClass.UserSchoolInfo
 import com.what.tomorrow_school_lunch.R
 import com.what.tomorrow_school_lunch.UI.newMain.fragment.BottomNavigationActivity
@@ -27,6 +28,7 @@ class SplashActivity : AppCompatActivity() {
 
         //true 실행 해봄, false 실행 안해봄
         val checkFirst :Boolean= prefs.getString("FIRST_START", "false").toString().toBoolean()
+        Log.d("로그",checkFirst.toString())
         if (checkFirst == false) {
             prefs.setString("FIRST_START","true")
 
@@ -36,7 +38,7 @@ class SplashActivity : AppCompatActivity() {
                     startActivity(
                         Intent(
                             this@SplashActivity,
-                            TutorialActivity::class.java
+                            BottomNavigationActivity::class.java
                         )
                     )
                     finish()

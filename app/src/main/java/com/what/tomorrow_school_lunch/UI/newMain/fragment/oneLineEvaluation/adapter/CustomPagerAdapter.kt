@@ -15,8 +15,8 @@ class CustomPagerAdapter(fm: FragmentManager): FragmentStatePagerAdapter(fm, BEH
 
     override fun getItem(position: Int): Fragment {
         return when (position) {
-            0 -> MealEvaluationFragment.newInstance(R.raw.smile1, "아침","오늘 급식은 먹을만 해요")
-            1 -> MealEvaluationFragment.newInstance(R.raw.smile2, "점심","와우 오늘은 포식")
+            0 -> MealEvaluationFragment.newInstance(R.raw.angry, "아침","오늘 급식은 먹을만 해요")
+            1 -> MealEvaluationFragment.newInstance(R.raw.angry, "점심","와우 오늘은 포식")
             else -> MealEvaluationFragment.newInstance(R.raw.angry, "저녁","오늘은 힘든날이네요")
         }
     }

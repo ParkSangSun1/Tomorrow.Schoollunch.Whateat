@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "869743061548",
+    "project_id": "tomorrowschoollunch",
+    "storage_bucket": "tomorrowschoollunch.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869743061548:android:a20a76260913d0db51bf89",
+        "android_client_info": {
+          "package_name": "com.what.tomorrow_school_lunch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869743061548-q4qo4ok1rgghbt44bput6igunl10qpa3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiqC6EE-hLAs3szuogDTBt3k_uXlKUj-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869743061548-q4qo4ok1rgghbt44bput6igunl10qpa3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

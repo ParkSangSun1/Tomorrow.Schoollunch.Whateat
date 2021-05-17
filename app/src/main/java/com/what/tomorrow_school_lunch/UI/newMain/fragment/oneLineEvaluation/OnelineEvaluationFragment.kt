@@ -40,21 +40,8 @@ class OnelineEvaluationFragment : Fragment() {
 
         vpAdapter = CustomPagerAdapter(childFragmentManager)
 
-        binding.viewpager.adapter = vpAdapter
-        binding.indicator.setViewPager(binding.viewpager)
-//        binding.indicatorView.apply {
-//            setSliderColor(0, 0)
-//            setSliderWidth(resources.getDimension(R.dimen.dp_10))
-//            setSliderHeight(resources.getDimension(R.dimen.dp_5))
-//            setSlideMode(IndicatorSlideMode.WORM)
-//            setIndicatorStyle(IndicatorStyle.CIRCLE)
-//            setupWithViewPager(binding.bannerView)
-//        }
-//
-
-
-//        binding.addSchoolRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL,false)
-//        binding.addSchoolRecyclerView.adapter = AddSchoolRecyclerViewAdapter()
+//        binding.viewpager.adapter = vpAdapter
+//        binding.indicator.setViewPager(binding.viewpager)
 
         return binding.root
     }
