@@ -1,8 +1,13 @@
 package com.what.tomorrow_school_lunch.DataClass
 
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+
 object Contants{
     const val TAG : String = "로그"
     var SCHOOLNAME=""
+    private val auth: FirebaseAuth =FirebaseAuth.getInstance()
+
 }
 
 enum class RESPONSE_STATE{

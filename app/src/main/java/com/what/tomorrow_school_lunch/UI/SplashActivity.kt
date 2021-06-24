@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import com.google.firebase.firestore.FirebaseFirestore
 import com.what.tomorrow_school_lunch.DataClass.UserSchoolInfo
 import com.what.tomorrow_school_lunch.R
+import com.what.tomorrow_school_lunch.UI.SchoolPerformMain.SchoolPerformMainActivity
 import com.what.tomorrow_school_lunch.UI.newMain.fragment.BottomNavigationActivity
+import com.what.tomorrow_school_lunch.UI.tutorial.SchoolSelectionActivity
 import com.what.tomorrow_school_lunch.UI.tutorial.TutorialActivity
 import com.what.tomorrow_school_lunch.Util.PreferenceUtil
 
@@ -16,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
         lateinit var prefs: PreferenceUtil
     }
 
-
+    private val db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         prefs = PreferenceUtil(applicationContext)
@@ -24,7 +27,6 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         prefs.getString("FIRST_START","")
-//        prefs = ("FIRST_START", MODE_PRIVATE)
 
         //true 실행 해봄, false 실행 안해봄
         val checkFirst :Boolean= prefs.getString("FIRST_START", "false").toString().toBoolean()
@@ -38,7 +40,7 @@ class SplashActivity : AppCompatActivity() {
                     startActivity(
                         Intent(
                             this@SplashActivity,
-                            BottomNavigationActivity::class.java
+                            SchoolSelectionActivity::class.java
                         )
                     )
                     finish()
@@ -49,6 +51,8 @@ class SplashActivity : AppCompatActivity() {
             UserSchoolInfo.School_Name = prefs.getString("SCHUL_NM","")
             UserSchoolInfo.School_Code = prefs.getString("SD_SCHUL_CODE","")
             UserSchoolInfo.Atpt_Ofcdc_Code = prefs.getString("ATPT_OFCDC_SC_CODE","")
+//            db.collection("schoolname").document(UserSchoolInfo.School_Name)
+//                .get()
 
             Handler().postDelayed(
                 {
@@ -56,7 +60,7 @@ class SplashActivity : AppCompatActivity() {
                     startActivity(
                         Intent(
                             this@SplashActivity,
-                            BottomNavigationActivity::class.java
+                            SchoolPerformMainActivity::class.java
                         )
                     )
                     finish()

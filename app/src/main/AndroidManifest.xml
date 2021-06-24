@@ -13,10 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tomorrow_School_lunch">
-
-        <activity android:name=".UI.newMain.fragment.BottomNavigationActivity">
-
-        </activity>
+        <activity android:name=".UI.SchoolPerformMain.SchoolPerformMainActivity"></activity>
+        <activity android:name=".UI.newMain.fragment.BottomNavigationActivity"></activity>
         <activity android:name=".UI.tutorial.SchoolSelectionActivity" />
         <activity android:name=".UI.tutorial.TutorialActivity" />
         <activity android:name=".UI.SplashActivity">
@@ -26,7 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

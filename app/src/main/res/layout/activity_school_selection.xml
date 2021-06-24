@@ -88,8 +88,10 @@
                 android:id="@+id/test_txt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="a"
-                android:textSize="15sp"
+                android:text="선택된 학교 없음"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/nanumbarungothiclight"
+                android:textSize="25sp"
                 />
         </androidx.core.widget.NestedScrollView>
 

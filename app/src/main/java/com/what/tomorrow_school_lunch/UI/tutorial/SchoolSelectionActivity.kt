@@ -13,6 +13,7 @@ import com.what.tomorrow_school_lunch.DataClass.UserSchoolInfo.School_Name
 import com.what.tomorrow_school_lunch.Retrofit.SchoolSelect.*
 import com.what.tomorrow_school_lunch.R
 import com.what.tomorrow_school_lunch.Retrofit.SchoolInfoClient
+import com.what.tomorrow_school_lunch.UI.SchoolPerformMain.SchoolPerformMainActivity
 import com.what.tomorrow_school_lunch.UI.SplashActivity.Companion.prefs
 import com.what.tomorrow_school_lunch.UI.newMain.fragment.BottomNavigationActivity
 import com.what.tomorrow_school_lunch.databinding.ActivitySchoolSelectionBinding
@@ -35,7 +36,7 @@ class SchoolSelectionActivity : AppCompatActivity() {
             UserSchoolInfo.School_Code = prefs.getString("SD_SCHUL_CODE","")
             UserSchoolInfo.Atpt_Ofcdc_Code = prefs.getString("ATPT_OFCDC_SC_CODE","")
 
-            val intent = Intent(this, BottomNavigationActivity::class.java)
+            val intent = Intent(this, SchoolPerformMainActivity::class.java)
             startActivity(intent)
             finish()
         }
