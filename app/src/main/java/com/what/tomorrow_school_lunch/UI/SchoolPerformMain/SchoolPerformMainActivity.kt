@@ -2,6 +2,7 @@ package com.what.tomorrow_school_lunch.UI.SchoolPerformMain
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
@@ -16,6 +17,7 @@ import com.what.tomorrow_school_lunch.databinding.ActivitySchoolPerformMainBindi
 import retrofit2.Response
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class SchoolPerformMainActivity : AppCompatActivity() {
     lateinit var binding: ActivitySchoolPerformMainBinding
@@ -45,19 +47,35 @@ class SchoolPerformMainActivity : AppCompatActivity() {
 
         schoolInfoSearchResponseLiveData1.observe(this, androidx.lifecycle.Observer {
             val aa = it.body()?.mealServiceDietInfo?.get(1)?.row?.get(0)?.DDISH_NM
-            Toast.makeText(this, "받아온 값 : $aa", Toast.LENGTH_SHORT).show()
-
-            var mealListM =
-                it.body()?.mealServiceDietInfo?.get(1)?.row?.get(0)?.DDISH_NM?.split("<br/>")
-            var mealListL =
-                it.body()?.mealServiceDietInfo?.get(1)?.row?.get(1)?.DDISH_NM?.split("<br/>")
-            var mealListN =
-                it.body()?.mealServiceDietInfo?.get(1)?.row?.get(2)?.DDISH_NM?.split("<br/>")
+//            Toast.makeText(this, "받아온 값 : $aa", Toast.LENGTH_SHORT).show()
 
 
-            binding.mealM.text = mealListM?.let { it1 -> getMealInfo(it1) }
-            binding.mealL.text = mealListL?.let { it1 -> getMealInfo(it1) }
-            binding.mealN.text = mealListN?.let { it1 -> getMealInfo(it1) }
+            val mealRowSize = it.body()?.mealServiceDietInfo?.get(1)?.row?.size
+
+            Log.d("로그","정보가 어느정도 들왔나?! $mealRowSize")
+            when (mealRowSize) {
+                1 -> {
+                    var mealListL: List<String>? =
+                        it.body()?.mealServiceDietInfo?.get(1)?.row?.get(0)?.DDISH_NM?.split("<br/>")
+                    binding.mealL.text = mealListL?.let { it1 -> getMealInfo(it1) }
+
+                }
+                3 -> {
+                    var mealListM: List<String>? =
+                        it.body()?.mealServiceDietInfo?.get(1)?.row?.get(0)?.DDISH_NM?.split("<br/>")
+                    var mealListL: List<String>? =
+                        it.body()?.mealServiceDietInfo?.get(1)?.row?.get(1)?.DDISH_NM?.split("<br/>")
+                    var mealListN: List<String>? =
+                        it.body()?.mealServiceDietInfo?.get(1)?.row?.get(2)?.DDISH_NM?.split("<br/>")
+
+                    binding.mealM.text = mealListM?.let { it1 -> getMealInfo(it1) }
+                    binding.mealL.text = mealListL?.let { it1 -> getMealInfo(it1) }
+                    binding.mealN.text = mealListN?.let { it1 -> getMealInfo(it1) }
+                }
+            }
+
+
+
 
         })
 

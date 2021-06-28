@@ -35,6 +35,7 @@ class SchoolSelectionActivity : AppCompatActivity() {
             School_Name = prefs.getString("SCHUL_NM","")
             UserSchoolInfo.School_Code = prefs.getString("SD_SCHUL_CODE","")
             UserSchoolInfo.Atpt_Ofcdc_Code = prefs.getString("ATPT_OFCDC_SC_CODE","")
+            prefs.setString("FIRST_START","true")
 
             val intent = Intent(this, SchoolPerformMainActivity::class.java)
             startActivity(intent)

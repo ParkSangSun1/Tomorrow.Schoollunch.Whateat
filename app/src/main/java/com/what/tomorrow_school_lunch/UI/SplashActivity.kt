@@ -32,7 +32,6 @@ class SplashActivity : AppCompatActivity() {
         val checkFirst :Boolean= prefs.getString("FIRST_START", "false").toString().toBoolean()
         Log.d("로그",checkFirst.toString())
         if (checkFirst == false) {
-            prefs.setString("FIRST_START","true")
 
             Handler().postDelayed(
                 {

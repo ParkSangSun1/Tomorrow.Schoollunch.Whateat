@@ -81,7 +81,7 @@
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/nanumbarungothicbold"
                         android:gravity="center"
-                        android:text="급식 내용"
+                        android:text="급식이 없습니다"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
@@ -119,7 +119,7 @@
                         android:fontFamily="@font/nanumbarungothicbold"
                         android:gravity="center"
 
-                        android:text="급식 내용"
+                        android:text="급식이 없습니다"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
@@ -155,7 +155,7 @@
                         android:fontFamily="@font/nanumbarungothicbold"
                         android:gravity="center"
 
-                        android:text="급식 내용"
+                        android:text="급식이 없습니다"
                         android:textColor="@color/black"
                         android:textSize="20sp" />
 
